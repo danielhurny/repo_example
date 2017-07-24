@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: repo_example
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: P3502712
+Implementation-Vendor-Id: repo_example
+Build-Jdk: 1.8.0_131
+Implementation-URL: http://projects.spring.io/spring-boot/repo_example
+ /
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
