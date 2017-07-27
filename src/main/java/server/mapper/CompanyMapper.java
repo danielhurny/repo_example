@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import server.dto.CompanyDTO;
+import server.dto.EmployeeDTO;
 import server.entity.Company;
 
 @Component
@@ -44,4 +45,31 @@ public class CompanyMapper {
 		}
 		return listDTO;
 	}
+
+	public Company dtoToEntity(CompanyDTO companyDto) {
+		Company company = null;
+
+		if (companyDto != null) {
+			company = new Company();
+			company.setAddress(companyDto.getAddress());
+			company.setEmployees(employeeMapper.listToEmployee(companyDto.getEmployees()));
+			company.setName(companyDto.getName());
+			company.setNumberOfDepartments(companyDto.getNumberOfDepartments());
+		}
+		return company;
+	}
+
+	public List<Company> dtosToEntities(List<CompanyDTO> listDto) {
+		List<Company> listEntities = null;
+
+		if (listDto != null) {
+			listEntities = new ArrayList();
+			for (CompanyDTO dto : listDto) {
+				listEntities.add(dtoToEntity(dto));
+			}
+
+		}
+		return listEntities;
+	}
+
 }

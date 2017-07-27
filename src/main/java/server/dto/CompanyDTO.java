@@ -2,8 +2,11 @@ package server.dto;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class CompanyDTO {
 	
+	@JsonProperty("company_name")
 	private String name;
 	
 	private String address;

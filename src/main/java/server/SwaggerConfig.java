@@ -22,6 +22,6 @@ public class SwaggerConfig {
                 .paths(PathSelectors.regex("/.*"))
                 .build()
                 .apiInfo(new ApiInfo("Opp2Deal API", "Opportunity to Deal", "1.0", null, 
-                						new Contact("Solar Turbines", "", "stefko_ivan@solartubines.com"), null, null));
+                						new Contact("Solar Turbines", "", "hurny_daniel@solartubines.com"), null, null));
     }
 }

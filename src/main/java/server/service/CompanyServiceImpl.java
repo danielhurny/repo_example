@@ -30,5 +30,14 @@ public class CompanyServiceImpl implements CompanyService {
 		return companyMapper.entityToDTO(company);
 
 	}
+	// vraciat company alebo companyDTO?
+	public Company saveCompanyToDb(CompanyDTO companyDto) {
+		return companyDao.saveCompany(companyMapper.dtoToEntity(companyDto));
+		
+	}
+	
+	public CompanyDTO findByName(String name) {
+		return companyMapper.entityToDTO(companyDao.findOneByName(name));
+	}
 }
 

@@ -24,7 +24,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public List<EmployeeDTO> getAll() {
 
+		
 		List<Employee> findAll = repository.findAll();
+		System.out.println(repository.getClass());
 
 		return mapper.entitiesToDTOs(findAll);
 	}
@@ -46,5 +48,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return repository.save(mapper.dtoToEmployee(employeeDto));
 		
 	}
+	
 
 }

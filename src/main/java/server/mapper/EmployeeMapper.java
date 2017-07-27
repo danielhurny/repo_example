@@ -46,6 +46,8 @@ public class EmployeeMapper {
 			employee.setComment(employeeDto.getComment());
 			employee.setAddress(employeeDto.getAddress());
 			employee.setName(employeeDto.getName());
+			employee.setFavouriteColour(employeeDto.getColour());
+			employee.setCompanyId(employeeDto.getCompanyId());
 		}
 		return employee;
 	}

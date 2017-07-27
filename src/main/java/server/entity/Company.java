@@ -1,10 +1,10 @@
 package server.entity;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -18,6 +18,7 @@ public class Company implements Serializable {
 	@GeneratedValue
 	private int id;
 
+	@Column (name = "name")
 	private String name;
 
 	private String address;
